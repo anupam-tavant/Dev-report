@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: productivity_report_development
+
+test:
+  <<: *default
+  database: productivity_report_test
+
+production:
+  <<: *default
+  database: productivity_report_production
+  username: productivity_report
+  password: <%= ENV['PRODUCTIVITY_REPORT_DATABASE_PASSWORD'] %>
