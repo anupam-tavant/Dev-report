@@ -24,7 +24,7 @@ authorizations: &AUTHORIZATIONS
 development:
   host: 10.129.135.231
   port: 389
-  attribute: mail
+  attribute: samaccountname
   base: dc=in,dc=corp,dc=tavant,dc=com
   admin_user: user@tavant.com
   admin_password: user_password

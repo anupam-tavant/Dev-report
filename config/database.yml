@@ -4,17 +4,20 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['USER'] == 'root' ? ENV['SUDO_USER'] : ENV['USER'] %>
+  password: 
 
 development:
   <<: *default
-  database: productivity_report_development
+  database: er_development
+  host: localhost
 
 test:
   <<: *default
-  database: productivity_report_test
+  database: er_test
 
 production:
   <<: *default
-  database: productivity_report_production
+  database: er_production
   username: productivity_report
   password: <%= ENV['PRODUCTIVITY_REPORT_DATABASE_PASSWORD'] %>
