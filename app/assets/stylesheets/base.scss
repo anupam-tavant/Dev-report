@@ -1,3 +1,43 @@
 .login-panel {
   margin-top: 25%
 }
+
+.btn-orange {
+  background-color: #f49325;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-orange:hover {
+  color: white;
+}
+
+.navbar-top-links {
+  margin-right: 0;
+}
+
+.navbar-brand > img {
+  height: 32px;
+  margin-top: -5px;
+}
+
+.navbar-default {
+  background-color: #f49325;
+}
+
+.navbar-top-links li a {
+  color: black;
+  min-height: 30px;
+}
+
+.dropdown-submenu > a:focus, .dropdown-submenu > a:hover, .dropdown-submenu:focus>a, r, .dropdown-submenu:hover>a,
+.dropdown-menu > li a:hover,
+.dropdown-menu > li a:focus { background-color: #f49325; background-image: none; filter: none; text-decoration: none; border: none; }
+.dropdown-menu .dropdown-user {
+  margin: 0;
+}
+
+.alert-general {
+  text-align: center;
+  color: black;
+}
