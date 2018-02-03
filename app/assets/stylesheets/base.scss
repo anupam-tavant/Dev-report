@@ -20,3 +20,24 @@
   height: 32px;
   margin-top: -5px;
 }
+
+.navbar-default {
+  background-color: #f49325;
+}
+
+.navbar-top-links li a {
+  color: black;
+  min-height: 30px;
+}
+
+.dropdown-submenu > a:focus, .dropdown-submenu > a:hover, .dropdown-submenu:focus>a, r, .dropdown-submenu:hover>a,
+.dropdown-menu > li a:hover,
+.dropdown-menu > li a:focus { background-color: #f49325; background-image: none; filter: none; text-decoration: none; border: none; }
+.dropdown-menu .dropdown-user {
+  margin: 0;
+}
+
+.alert-general {
+  text-align: center;
+  color: black;
+}
