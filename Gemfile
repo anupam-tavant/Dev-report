@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem "devise"
 gem "devise_ldap_authenticatable"
+gem 'rest-client', '~> 1.8'
 
 
 group :development, :test do

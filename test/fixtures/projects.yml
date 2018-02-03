@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  default_branch_id: 1
+  public: false
+  archived: false
+  visibility_level: 1
+  ssh_url_to_repo: MyString
+  http_url_to_repo: MyString
+  web_url: MyString
+  name: MyString
+  name_with_namespace: MyString
+  path: MyString
+  path_with_namespace: MyString
+  issues_enabled: false
+  merge_requests_enabled: false
+  builds_enabled: false
+  shared_runners_enabled: false
+  lfs_enabled: false
+  creator_id: 1
+  star_count: 1
+  forks_count: 1
+  open_issues_count: 1
+  public_builds: false
+  only_allow_merge_if_build_succeeds: false
+  request_access_enabled: false
+  only_allow_merge_if_all_discussions_are_resolved: false
+  permissions: MyText
+
+two:
+  description: MyText
+  default_branch_id: 1
+  public: false
+  archived: false
+  visibility_level: 1
+  ssh_url_to_repo: MyString
+  http_url_to_repo: MyString
+  web_url: MyString
+  name: MyString
+  name_with_namespace: MyString
+  path: MyString
+  path_with_namespace: MyString
+  issues_enabled: false
+  merge_requests_enabled: false
+  builds_enabled: false
+  shared_runners_enabled: false
+  lfs_enabled: false
+  creator_id: 1
+  star_count: 1
+  forks_count: 1
+  open_issues_count: 1
+  public_builds: false
+  only_allow_merge_if_build_succeeds: false
+  request_access_enabled: false
+  only_allow_merge_if_all_discussions_are_resolved: false
+  permissions: MyText
