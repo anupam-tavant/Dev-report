@@ -1,3 +1,22 @@
 .login-panel {
   margin-top: 25%
 }
+
+.btn-orange {
+  background-color: #f49325;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-orange:hover {
+  color: white;
+}
+
+.navbar-top-links {
+  margin-right: 0;
+}
+
+.navbar-brand > img {
+  height: 32px;
+  margin-top: -5px;
+}
