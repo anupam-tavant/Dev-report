@@ -1,3 +1,11 @@
+#wrapper {
+  width: 100%;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
 .login-panel {
   margin-top: 25%
 }
@@ -41,3 +49,48 @@
   text-align: center;
   color: black;
 }
+
+@media (min-width: 768px) {
+  .sidebar {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    margin-top: 51px;
+  }
+
+  #page-wrapper {
+    position: inherit;
+    margin: 0;
+    border-left: 1px solid #e7e7e7;
+  }
+}
+
+#page-wrapper {
+  background-color: white;
+  min-height: 580px;
+  width: 100%
+}
+
+.sidebar .sidebar-nav.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar ul li {
+  border-bottom: 1px solid #e7e7e7;
+  a {
+    font-size: 17px;
+  }
+}
+
+#sidebar-wrapper {
+  position: fixed;
+  height: 100%;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}
+
+#sidebar-wrapper .sidebar-nav li {
+  line-height: 35px;
+}
+
