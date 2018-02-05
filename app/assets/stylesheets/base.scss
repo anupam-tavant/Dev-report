@@ -51,13 +51,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .sidebar {
-    z-index: 1;
-    position: absolute;
-    width: 250px;
-    margin-top: 51px;
-  }
-
   #page-wrapper {
     position: inherit;
     margin: 0;
@@ -68,7 +61,10 @@ body {
 #page-wrapper {
   background-color: white;
   min-height: 580px;
-  width: 100%
+}
+
+.right-content {
+  margin: 20px;
 }
 
 .sidebar .sidebar-nav.navbar-collapse {
@@ -83,8 +79,27 @@ body {
   }
 }
 
+.sidebar .nav-second-level li a {
+  padding-left: 37px;
+}
+
+.sidebar .nav-second-level li {
+  border-bottom: none !important;
+}
+
+.sidebar .arrow {
+  float: right;
+}
+
+.sidebar .fa.arrow:before {
+  content: "\f104";
+}
+
+.sidebar .active > a > .fa.arrow:before {
+  content: "\f107";
+}
+
 #sidebar-wrapper {
-  position: fixed;
   height: 100%;
   background-color: #f5f5f5;
   border-color: #ddd;
