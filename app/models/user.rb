@@ -22,16 +22,14 @@ class User < ApplicationRecord
   end
 
   def self.create_or_update_user(user_details, project_id: nil)
-    User.skip_callback(:validation, :before, :get_ldap_email)
     user_details.each do |user_record|
       user = find_or_initialize_by(username: user_record["username"])
       if !user.id
         user.assign_attributes(email: user_record["username"]+"@tavant.com", password: "Welcome123")
-        user.save!
+        user.save(validate: false)
       end
       UsersProject.set_user_project(user.id, project_id, gitlab_enabled: true) if project_id
     end
-    User.set_callback(:validation, :before, :get_ldap_email)
   end
 
 end

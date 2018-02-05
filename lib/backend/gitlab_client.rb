@@ -1,6 +1,5 @@
 class GitlabClient
   require 'rest_client'
-  GITLAB_BASE_URL = 'https://gitlab.tavant.com/api/v3/'
 
   def initialize
   end
@@ -38,7 +37,7 @@ class GitlabClient
   private
 
   def prepare_url(uri)
-    GITLAB_BASE_URL+uri
+    ENV["GITLAB_BASE_URL"]+uri
   end
 
   def call_api(url, header: api_header(params: {}))
@@ -51,7 +50,7 @@ class GitlabClient
   end
   def api_header(params: {})
     header = Hash.new
-    header[:private_token] = 'SqgqXrMrrdt25-sw68Yz'
+    header[:private_token] = ENV["gitlab_private_token"]
     header.merge!(params: params)
     header
   end
