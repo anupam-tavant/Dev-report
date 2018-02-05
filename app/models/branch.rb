@@ -19,6 +19,7 @@ class Branch < ApplicationRecord
       else
         branch.update_attributes(last_commit: branch_detail["commit"])
       end
+      Gitlab.fetch_commits(branch)
     end    
   end
 end
