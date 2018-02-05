@@ -1,5 +1,6 @@
 class Branch < ApplicationRecord
   belongs_to :project
+  has_many :gitlab_stats, dependent: :nullify
 
   def self.create_from_api(branch_detail, project_id)
     branch = find_by(name: branch_detail["name"], project_id: project_id)

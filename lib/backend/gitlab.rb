@@ -1,7 +1,7 @@
 module Gitlab
   def fetch_project
     projects = GitlabClient.new.collect_projects
-    ProjectCollection.new.create_or_update_project(projects)
+    ProjectCollection.new.create_or_update_github_project(projects)
   end
   def fetch_branches_for(project_response)
     project_id = project_response.pid
