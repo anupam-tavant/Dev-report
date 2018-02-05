@@ -1,5 +1,6 @@
 class Branch < ApplicationRecord
   belongs_to :project
+  has_many :gitlab_stats, dependent: :nullify
 
   def self.create_or_update_branch(branch_json, project_id)
     branch_json.each do |branch_detail|

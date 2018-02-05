@@ -1,5 +1,9 @@
 class Project < ApplicationRecord
+  has_many :users_projects
+  has_many :users, through: :users_projects
   has_many :branches
+  has_many :gitlab_stats, dependent: :destroy
+  has_many :jira_stats, dependent: :destroy
 
   def self.create_from_api project_detail
     project = find_by(name: project_detail["name"])

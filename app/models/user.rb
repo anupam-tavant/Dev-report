@@ -4,6 +4,11 @@ class User < ApplicationRecord
   devise :ldap_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :users_projects
+  has_many :projects, through: :users_projects
+  has_many :gitlab_stats, dependent: :destroy
+  has_many :jira_stats, dependent: :destroy
+
   validates :username, presence: true, uniqueness: true
 
   before_validation :get_ldap_email
