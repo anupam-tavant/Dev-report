@@ -16,4 +16,8 @@ class User < ApplicationRecord
     Digest::SHA1.hexdigest(email)[0,29]
   end
 
+  def create_or_update_user(user_details, project_id)
+    find_or_initliase_by()
+  end
+
 end

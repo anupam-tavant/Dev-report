@@ -2,9 +2,9 @@ class Project < ApplicationRecord
   has_many :branches
 
   def self.create_from_api project_detail
-    eng_project = find_by(name: project_detail["name"])
-    if !eng_project
-      eng_project = new(
+    project = find_by(name: project_detail["name"])
+    if !project
+      project = new(
         pid: project_detail["id"],
         description: project_detail["description"],
         is_public: project_detail["public"],
@@ -34,8 +34,10 @@ class Project < ApplicationRecord
         project_created_at: project_detail["created_at"],
         project_last_activity_at: project_detail["last_activity_at"]
         )
-      eng_project.save!
+      project.save!
+    else
+      project.update_attributes(project_last_activity_at: project_detail["last_activity_at"])
     end
-    eng_project
+    project
   end
 end
