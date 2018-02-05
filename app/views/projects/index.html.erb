@@ -1,0 +1,20 @@
+<div class="row">
+  <table class="dataTable table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Last Activity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @projects && @projects.each do |project| %>
+        <tr>
+          <td><%= project.name %></td>
+          <td><%= project.description %></td>
+          <td><%= project.project_last_activity_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
