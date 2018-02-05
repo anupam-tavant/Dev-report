@@ -1,4 +1,5 @@
 module Gitlab
+
   def fetch_groups
     groups = GitlabClient.new.collect_groups
     groups.each do |group|
@@ -6,9 +7,10 @@ module Gitlab
       fetch_project(group["id"])
     end
   end
+
   def fetch_project(group_id)
     projects = GitlabClient.new.collect_projects(group_id)
-    ProjectCollection.create_or_update_project(projects)
+    ProjectCollection.create_or_update_github_project(projects)
   end
 
   def fetch_branches(project_response)
