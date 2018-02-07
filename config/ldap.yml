@@ -26,8 +26,8 @@ development:
   port: 389
   attribute: samaccountname
   base: dc=in,dc=corp,dc=tavant,dc=com
-  admin_user: user@tavant.com
-  admin_password: user_password
+  admin_user: anupam.mohapatra@tavant.com
+  admin_password: Gudu@0014
   ssl: false
   # <<: *AUTHORIZATIONS
 

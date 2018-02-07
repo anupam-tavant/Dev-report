@@ -1,9 +1,10 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 ruby '2.5.0'
 
 gem 'rails', '~> 5.0.0'
 gem 'pg', '~> 0.18'
+gem 'figaro'
 gem 'puma', '~> 3.0'
 
 gem 'sass-rails', '~> 5.0'
@@ -29,4 +30,9 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
 end
